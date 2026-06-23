@@ -287,12 +287,32 @@ body{width:100%;background:var(--dark);overflow-x:hidden;font-family:'Inter',san
 .form-success{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:3rem 2rem;text-align:center;gap:1rem;
-  opacity:0;pointer-events:none;height:0;overflow:hidden;transition:opacity .4s;
+  opacity:0;pointer-events:none;height:20rem;overflow:hidden;transition:opacity .4s;
 }
 .form-success-icon{width:52px;height:52px;border-radius:50%;background:rgba(232,99,42,.15);border:1.5px solid var(--orange);display:flex;align-items:center;justify-content:center}
 .form-success-icon svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:2}
 .form-success-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--white)}
 .form-success-text{font-size:.84rem;color:var(--muted)}
+
+#form-main.is-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  display: none;
+}
+
+/* #form-success {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+} */
+
+#form-success.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
 /* ══ FOOTER ══ */
 #footer{background:var(--dark);padding:4rem clamp(1.5rem,8vw,9rem);border-top:.5px solid rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;gap:2rem;text-align:center}
@@ -435,7 +455,7 @@ body{width:100%;background:var(--dark);overflow-x:hidden;font-family:'Inter',san
     <div class="about-grid">
       <div class="reveal-left">
         <div class="about-avatar-wrap">
-          <img src="avatar.png" alt="Shubham Shaw 3D portrait"/>
+          <img src="Shubham_Gemini_Generated_Image2.png" alt="Shubham Shaw 3D portrait"/>
           <div class="about-avatar-glow"></div>
           <div class="about-avatar-badge">Open to Opportunities ✦</div>
         </div>
@@ -900,25 +920,78 @@ document.getElementById('guide').addEventListener('click',()=>{
 
 /* ── FORM ── */
 function toggleChip(el){el.classList.toggle('selected');}
-function submitForm(){
-  const name=document.getElementById('f-name').value.trim();
-  const email=document.getElementById('f-email').value.trim();
-  if(!name||!email){
-    const inp=!name?document.getElementById('f-name'):document.getElementById('f-email');
-    inp.style.borderColor='rgba(255,80,80,.6)';
-    setTimeout(()=>inp.style.borderColor='',2000);
+async function submitForm() {
+  const formMain = document.getElementById('form-main');
+  const successBox = document.getElementById('form-success');
+  const submitBtn = formMain.querySelector('.form-submit');
+
+  const nameInput = document.getElementById('f-name');
+  const emailInput = document.getElementById('f-email');
+  const msgInput = document.getElementById('f-msg');
+
+  if (!nameInput.value.trim() || !emailInput.value.trim() || !msgInput.value.trim()) {
+    alert('Please fill in your name, email, and message.');
     return;
   }
-  const fm=document.getElementById('form-main');
-  const fs=document.getElementById('form-success');
-  fm.style.opacity='0';
-  fm.style.pointerEvents='none';
-  setTimeout(()=>{
-    fm.style.display='none';
-    fs.style.height='auto';
-    fs.style.opacity='1';
-    fs.style.pointerEvents='all';
-  },350);
+
+  const companyInput = document.getElementById('f-company');
+  const typeSelect = document.getElementById('f-type');
+
+  const chips = document.querySelectorAll('.form-chip.selected');
+  const selectedTechs = Array.from(chips)
+    .map(chip => chip.textContent.trim())
+    .join(', ');
+
+  const formData = new FormData();
+  formData.append('name', nameInput.value.trim());
+  formData.append('email', emailInput.value.trim());
+  formData.append('company', companyInput.value.trim());
+  formData.append('opportunity_type', typeSelect.value || '');
+  formData.append('technologies', selectedTechs);
+  formData.append('message', msgInput.value.trim());
+
+  formData.append('access_key', '981db733-2c6a-42e6-b01d-01a966c830f1');
+
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Sending…';
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      // 1) Let CSS handle visibility/animation via classes
+      //    Adjust 'is-hidden' / 'is-visible' to whatever your original classes were
+      formMain.classList.add('is-hidden');      // hide form (previously visible)
+      successBox.classList.add('is-visible');   // show success block with animation
+
+      // 2) Remove inline display overrides so they don't interfere
+      formMain.style.removeProperty('display');
+      successBox.style.removeProperty('display');
+
+      // 3) Reset fields
+      nameInput.value = '';
+      emailInput.value = '';
+      companyInput.value = '';
+      typeSelect.value = '';
+      msgInput.value = '';
+      chips.forEach(chip => chip.classList.remove('selected'));
+    } else {
+      alert('Error: ' + data.message);
+      console.error('Web3Forms error:', data);
+    }
+  } catch (error) {
+    alert('Something went wrong. Please try again.');
+    console.error('Web3Forms network error:', error);
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
 }
 
 /* ── VIDEO ── */
@@ -964,8 +1037,8 @@ function submitForm(){
   const pal=[[1,.82,.62],[.91,.39,.17],[1,.95,.88],[.72,.55,.38],[.62,.72,.95]];
   for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*14;pos[i*3+1]=(Math.random()-.5)*9;pos[i*3+2]=(Math.random()-.5)*6-1;const s=Math.random();sz2[i]=.018+s*.14;ph[i]=Math.random()*Math.PI*2;sp[i]=.18+Math.random()*.32;const c2=pal[Math.floor(Math.random()*pal.length)];col[i*3]=c2[0];col[i*3+1]=c2[1];col[i*3+2]=c2[2];}
   const geo=new THREE.BufferGeometry();
-  geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('size',new THREE.BufferAttribute(sz2,1));geo.setAttribute('color',new THREE.BufferAttribute(col,3));geo.setAttribute('aPhase',new THREE.BufferAttribute(ph,1));geo.setAttribute('aSpeed',new THREE.BufferAttribute(sp,1));
-  const mat=new THREE.ShaderMaterial({uniforms:{uTime:{value:0},uTex:{value:tex}},vertexShader:`attribute float size;attribute float aPhase;attribute float aSpeed;attribute vec3 color;varying vec3 vColor;varying float vAlpha;uniform float uTime;void main(){vColor=color;vec3 p=position;p.y+=sin(uTime*aSpeed+aPhase)*.28;p.x+=cos(uTime*aSpeed*.6+aPhase)*.14;vec4 mv=modelViewMatrix*vec4(p,1.);float d=smoothstep(-4.,2.,p.z);gl_PointSize=size*(400./-mv.z)*(.4+d*.7);vAlpha=.08+d*.52;gl_Position=projectionMatrix*mv;}`,fragmentShader:`uniform sampler2D uTex;varying vec3 vColor;varying float vAlpha;void main(){vec4 t=texture2D(uTex,gl_PointCoord);gl_FragColor=vec4(vColor,t.a*vAlpha);}`,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,vertexColors:true});
+  geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('size',new THREE.BufferAttribute(sz2,1));geo.setAttribute('aColor',new THREE.BufferAttribute(col,3));geo.setAttribute('aPhase',new THREE.BufferAttribute(ph,1));geo.setAttribute('aSpeed',new THREE.BufferAttribute(sp,1));
+  const mat=new THREE.ShaderMaterial({uniforms:{uTime:{value:0},uTex:{value:tex}},vertexShader:`attribute float size;attribute float aPhase;attribute float aSpeed;attribute vec3 aColor;varying vec3 vColor;varying float vAlpha;uniform float uTime;void main(){vColor=aColor;vec3 p=position;p.y+=sin(uTime*aSpeed+aPhase)*.28;p.x+=cos(uTime*aSpeed*.6+aPhase)*.14;vec4 mv=modelViewMatrix*vec4(p,1.);float d=smoothstep(-4.,2.,p.z);gl_PointSize=size*(400./-mv.z)*(.4+d*.7);vAlpha=.08+d*.52;gl_Position=projectionMatrix*mv;}`,fragmentShader:`uniform sampler2D uTex;varying vec3 vColor;varying float vAlpha;void main(){vec4 t=texture2D(uTex,gl_PointCoord);gl_FragColor=vec4(vColor,t.a*vAlpha);}`,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,vertexColors:true});
   const pts=new THREE.Points(geo,mat);scene.add(pts);
   let rafId,t0=performance.now();
   function render(now){rafId=requestAnimationFrame(render);mat.uniforms.uTime.value=(now-t0)*.001;camera.position.x+=(mouse.x*.22-camera.position.x)*.025;camera.position.y+=(mouse.y*.14-camera.position.y)*.025;camera.lookAt(scene.position);renderer.render(scene,camera);}
