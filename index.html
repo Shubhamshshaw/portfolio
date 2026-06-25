@@ -90,7 +90,7 @@ body:hover #cursor-dot{opacity:1}
 @keyframes nb-drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(80px,-50px) scale(1.2)}}
 
 /* Starfield canvas */
-#star-canvas{position:absolute;inset:0;z-index:1;pointer-events:none}
+#star-canvas{position:absolute;inset:0;z-index:5;pointer-events:none}
 
 /* Video */
 #video-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;filter:blur(36px) brightness(.18) saturate(1.8) hue-rotate(200deg);z-index:2;pointer-events:none}
@@ -98,7 +98,7 @@ body:hover #cursor-dot{opacity:1}
 #video-fg{height:100%;width:auto;max-width:72vw;object-fit:cover;object-position:top center;
   mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%);
   -webkit-mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%);
-  opacity:0;transition:opacity 1.8s ease;filter:brightness(.85) contrast(1.1) hue-rotate(10deg)}
+  opacity:1;transition:opacity 1.8s ease;filter:brightness(.85) contrast(1.1) hue-rotate(10deg)}
 
 /* Grads */
 .g-bot{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,var(--void) 0%,rgba(2,2,13,.9) 40%,transparent 100%);z-index:4;pointer-events:none}
@@ -129,7 +129,7 @@ body:hover #cursor-dot{opacity:1}
 /* Typewriter eyebrow */
 .eyebrow{font-family:'Space Mono',monospace;font-size:clamp(.58rem,1.1vw,.7rem);
   letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);
-  margin-bottom:1.2rem;opacity:0;transform:translateY(14px);
+  margin-bottom:1.2rem;opacity:1;transform:translateY(14px);
   display:flex;align-items:center;gap:12px}
 .eyebrow-bar{width:0;height:1px;background:linear-gradient(to right,transparent,var(--cyan));transition:width 1s ease .6s}
 .eyebrow-bar.go{width:36px}
@@ -142,7 +142,7 @@ body:hover #cursor-dot{opacity:1}
 .name-block{display:flex;flex-direction:column;line-height:.86;margin-bottom:1.8rem}
 .name-first,.name-last{font-family:'Orbitron',sans-serif;font-weight:900;
   font-size:clamp(3.2rem,9.5vw,8.5rem);letter-spacing:-.02em;
-  opacity:0;transform:translateY(40px) skewX(-3deg);will-change:transform,opacity}
+  opacity:1;transform:translateY(40px) skewX(-3deg);will-change:transform,opacity}
 .name-first{color:var(--white)}
 .name-last{position:relative;color:transparent;
   -webkit-text-stroke:1.5px rgba(0,245,255,.4)}
@@ -163,7 +163,7 @@ body:hover #cursor-dot{opacity:1}
   max-width:540px;opacity:0;transform:translateY(14px);margin-bottom:2.4rem}
 
 /* Animated stack pills */
-.stack-row{display:flex;flex-wrap:wrap;gap:8px;opacity:0;transform:translateY(12px);pointer-events:all}
+.stack-row{display:flex;flex-wrap:wrap;gap:8px;opacity:1;transform:translateY(12px);pointer-events:all}
 .pill{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(0,245,255,.8);border:.5px solid rgba(0,245,255,.2);
   padding:5px 13px;border-radius:1px;background:rgba(0,245,255,.04);
