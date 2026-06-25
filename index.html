@@ -93,7 +93,7 @@ body:hover #cursor-dot{opacity:1}
 #star-canvas{position:absolute;inset:0;z-index:5;pointer-events:none}
 
 /* Video */
-#video-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;filter:blur(36px) brightness(.18) saturate(1.8) hue-rotate(200deg);z-index:2;pointer-events:none}
+#video-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;filter:blur(20px) brightness(0.5) saturate(6.8) hue-rotate(200deg);z-index:2;pointer-events:none}
 #video-fg-wrap{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;z-index:3;pointer-events:none}
 #video-fg{height:100%;width:auto;max-width:72vw;object-fit:cover;object-position:top center;
   mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%);
@@ -562,6 +562,46 @@ body:hover #cursor-dot{opacity:1}
   transform:translateX(0);transition:transform 1s cubic-bezier(.77,0,.18,1);pointer-events:none;z-index:5}
 .slide-section.revealed::after{transform:translateX(101%)}
 
+/* ══ HR-OPTIMIZED DOWNLOAD BUTTON ══ */
+.btn-download-hr {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 28px;
+  background: rgba(0, 245, 255, 0.08);
+  border: 1px solid var(--cyan);
+  border-radius: 3px;
+  font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--cyan); text-decoration: none;
+  position: relative; overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+  animation: btn-breathe 3s infinite ease-in-out;
+}
+.hr-pulse {
+  width: 6px; height: 6px; background: var(--green); border-radius: 50%;
+  box-shadow: 0 0 8px var(--green); animation: pulse-dot 1.2s infinite;
+}
+.btn-download-hr svg { width: 16px; height: 16px; stroke-width: 2; transition: transform 0.3s; }
+.btn-download-hr::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,245,255,0.3), rgba(157,92,255,0.3));
+  transform: scaleX(0); transform-origin: right; transition: transform 0.4s ease; z-index: -1;
+}
+.btn-download-hr:hover::before { transform: scaleX(1); transform-origin: left; }
+.btn-download-hr:hover {
+  color: #fff; border-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.6), inset 0 0 15px rgba(0, 245, 255, 0.3);
+  transform: translateY(-2px);
+  animation: none; /* Suspends the breathing animation while hovered */
+}
+.btn-download-hr:hover svg { transform: translateY(3px); stroke: #fff; }
+
+@keyframes btn-breathe {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 245, 255, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.6), 0 0 15px rgba(157, 92, 255, 0.3); }
+}
+
 /* ══ RESPONSIVE ══ */
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:3rem}
@@ -698,6 +738,17 @@ body:hover #cursor-dot{opacity:1}
       <span class="pill">.NET Core</span><span class="pill">Angular</span><span class="pill">Azure</span>
       <span class="pill">Microservices</span><span class="pill">Java Spring Boot</span>
       <span class="pill">MS SQL</span><span class="pill">CI/CD</span><span class="pill">Entity Framework</span>
+    </div>
+    <div class="resume-dl-wrap" style="opacity:0; transform:translateY(12px); animation: fade-in-scroll 1s ease 1.2s forwards; pointer-events: all; margin-top: 2.2rem;">
+      <a href="ShubhamShaw_Resume.pdf" class="btn-download-hr" download>
+        <span class="hr-pulse"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download Resume
+      </a>
     </div>
   </div>
   <div id="scta" role="button" tabindex="0" aria-label="Scroll down">
