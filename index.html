@@ -121,9 +121,12 @@ body:hover #cursor-dot{opacity:1}
 #video-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;filter:blur(20px) brightness(0.5) saturate(6.8) hue-rotate(200deg);z-index:2;pointer-events:none}
 #video-fg-wrap{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:end;margin-right: 14rem;z-index:3;pointer-events:none}
 #video-fg{height:100%;width:auto;max-width:72vw;object-fit:cover;object-position:top center;
-  mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%);
-  -webkit-mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%);
-  opacity:1;transition:opacity 1.8s ease;filter:brightness(.85) contrast(1.1) hue-rotate(10deg)}
+  mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%), linear-gradient(to right,transparent 0%,black 20%,black 80%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to top,transparent 0%,black 20%,black 80%,transparent 100%), linear-gradient(to right,transparent 0%,black 20%,black 80%,transparent 100%);
+  opacity:1;transition:opacity 1.8s ease;filter:brightness(.85) contrast(1.1) hue-rotate(10deg);
+  mask-composite:intersect;
+  -webkit-mask-composite:source-in;
+}
 
 /* Apply only on screens 1024px and below */
 @media screen and (max-width: 1024px) {
