@@ -2,7 +2,7 @@
 
 > *"Full-stack engineer architecting scalable systems across the .NET universe — 6+ years collapsing complexity into elegant, high-performance solutions."*
 
-[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Site-00F5FF?style=for-the-badge)](https://shubhamshshaw.github.io/portfolio/)
+[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Site-00F5FF?style=for-the-badge)](https://shubhamshaw.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-9D5CFF?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shubham-s-9a1a34168)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-FF00FF?style=for-the-badge&logo=github)](https://github.com/Shubhamshshaw)
 [![Email](https://img.shields.io/badge/Email-Contact-00FF88?style=for-the-badge&logo=gmail)](mailto:shawshubham24@gmail.com)
@@ -189,7 +189,7 @@ Open to the right conversations — hiring, freelance, or just a good chat about
 | 📞 Phone | +91-7003994052 |
 | 💼 LinkedIn | [linkedin.com/in/shubham-s-9a1a34168](https://www.linkedin.com/in/shubham-s-9a1a34168) |
 | 🐙 GitHub | [github.com/Shubhamshshaw](https://github.com/Shubhamshshaw) |
-| 🌐 Portfolio | [shubhamshshaw.github.io/portfolio](https://shubhamshshaw.github.io/portfolio/) |
+| 🌐 Portfolio | [https://shubhamshaw.dev](https://shubhamshaw.dev) |
 
 **Available for:** Senior SDE · Lead Engineer · Architect roles · Freelance (API design, backend systems, cloud migrations) · Technical consulting & mentorship
 
