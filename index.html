@@ -22,28 +22,75 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Shubham Shaw",
-  "jobTitle": "Senior Software Engineer",
-  "url": "https://shubhamshaw.dev/",
-  "sameAs": [
-    "https://github.com/Shubhamshshaw",
-    "https://www.linkedin.com/in/shubham-s-9a1a34168"
-  ],
-  "email": "mailto:shawshubham24@gmail.com"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "Vatsalya Circle",
-  "operatingSystem": "Android",
-  "applicationCategory": "HealthApplication",
-  "url": "https://vatsalyacircle.web.app/",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.vatsalyacircle.app",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "author": {"@type": "Person", "name": "Shubham Shaw", "url": "https://shubhamshaw.dev/"}
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shubhamshaw.dev/#person",
+      "name": "Shubham Shaw",
+      "jobTitle": "Senior Software Engineer",
+      "description": "Shubham Shaw is a Senior Software Engineer based in Bengaluru, India, and the founder of Vatsalya Circle, a family elder-care app.",
+      "url": "https://shubhamshaw.dev/",
+      "image": "https://shubhamshaw.dev/Shubham_Gemini_Generated_Image2_260x346.png",
+      "email": "mailto:shawshubham24@gmail.com",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Bengaluru, India"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Jadavpur University"
+      },
+      "knowsAbout": [
+        ".NET Core",
+        "Java Spring Boot",
+        "Angular",
+        "React Native",
+        "Microservices",
+        "Azure",
+        "Google Cloud Run"
+      ],
+      "sameAs": [
+        "https://github.com/Shubhamshshaw",
+        "https://www.linkedin.com/in/shubham-s-9a1a34168",
+        "https://www.producthunt.com/@shubham_shaw96"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shubhamshaw.dev/#website",
+      "name": "Shubham Shaw",
+      "url": "https://shubhamshaw.dev/",
+      "about": {
+        "@id": "https://shubhamshaw.dev/#person"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vatsalyacircle.web.app/#developer",
+      "name": "Shaw Multi-thread Studio",
+      "url": "https://vatsalyacircle.web.app/",
+      "founder": {
+        "@id": "https://shubhamshaw.dev/#person"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://vatsalyacircle.web.app/#app",
+      "name": "Vatsalya Circle",
+      "operatingSystem": "Android",
+      "applicationCategory": "LifestyleApplication",
+      "url": "https://vatsalyacircle.web.app/",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.vatsalyacircle.app",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@id": "https://vatsalyacircle.web.app/#developer"
+      }
+    }
+  ]
 }
 </script>
 <style>
