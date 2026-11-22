@@ -5,7 +5,7 @@
 [![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Site-00F5FF?style=for-the-badge)](https://shubhamshaw.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-9D5CFF?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shubham-s-9a1a34168)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-FF00FF?style=for-the-badge&logo=github)](https://github.com/Shubhamshshaw)
-[![Email](https://img.shields.io/badge/Email-Contact-00FF88?style=for-the-badge&logo=gmail)](mailto:shawshubham24@gmail.com)
+[![Email](https://img.shields.io/badge/Email-Contact-00FF88?style=for-the-badge&logo=gmail)](mailto:shubhamshaw.dev@gmail.com)
 
 ---
 
@@ -196,7 +196,7 @@ Open to the right conversations — hiring, freelance, or just a good chat about
 
 | Channel | Details |
 |---|---|
-| 📧 Email | [shawshubham24@gmail.com](mailto:shawshubham24@gmail.com) |
+| 📧 Email | [shubhamshaw.dev@gmail.com](mailto:shubhamshaw.dev@gmail.com) |
 | 📞 Phone | +91-7003994052 |
 | 💼 LinkedIn | [linkedin.com/in/shubham-s-9a1a34168](https://www.linkedin.com/in/shubham-s-9a1a34168) |
 | 🐙 GitHub | [github.com/Shubhamshshaw](https://github.com/Shubhamshshaw) |
