@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Shubham Shaw - Senior Software Engineer</title>
 <meta name="title" content="Shubham Shaw - Senior Software Engineer" />
-<meta name="description" content="Portfolio of Shubham Shaw, a Senior Software Engineer specializing in full-stack solutions, cloud architecture, and microservices." />
+<meta name="description" content="Portfolio of Shubham Shaw, a Senior Software Engineer specializing in full-stack solutions, cloud architecture, and microservices, and founder of the Vatsalya Circle elder-care app." />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Shubham Shaw" />
 <meta property="og:url" content="https://shubhamshaw.dev/" />
 <meta property="og:title" content="Shubham Shaw - Senior Software Engineer" />
-<meta property="og:description" content="Portfolio of Shubham Shaw, a Senior Software Engineer specializing in full-stack solutions, cloud architecture, and microservices." />
+<meta property="og:description" content="Portfolio of Shubham Shaw, a Senior Software Engineer specializing in full-stack solutions, cloud architecture, and microservices, and founder of the Vatsalya Circle elder-care app." />
 <meta property="og:image" content="https://shubhamshaw.dev/Shubham_Gemini_Generated_Image2_260x346.png" />
-<meta name="keywords" content="Shubham Shaw, Shubham Shaw Software Engineer, Shubham Shaw Developer, Shubham Shaw Optum, Shubham Shaw Portfolio, Shubham Shaw Senior Software Engineer, Shubham Shaw LinkedIn, Shubham Shaw GitHub, .NET Core Developer India, Angular Full Stack Engineer, Optum Senior Engineer, Keka HR Developer, Azure Cloud Architect, Microservices Backend Engineer, C# System Design Expert, Java Spring Boot Specialist, Enterprise Platform Engineering, Software Development Engineer III, SDE 2, SDE 3, Remote Full Stack Developer, Tech Lead .NET Angular">
+<meta name="keywords" content="Shubham Shaw, Vatsalya Circle, Vatsalya Circle founder, Shubham Shaw Software Engineer, Shubham Shaw Developer, Shubham Shaw Optum, Shubham Shaw Portfolio, Shubham Shaw Senior Software Engineer, Shubham Shaw LinkedIn, Shubham Shaw GitHub, .NET Core Developer India, Angular Full Stack Engineer, Optum Senior Engineer, Keka HR Developer, Azure Cloud Architect, Microservices Backend Engineer, C# System Design Expert, Java Spring Boot Specialist, Enterprise Platform Engineering, Software Development Engineer III, SDE 2, SDE 3, Remote Full Stack Developer, Tech Lead .NET Angular">
 <meta name="msvalidate.01" content="92FCED92F5E43C5C39F549BDBFC5E6D3" />
 
 <link rel="canonical" href="https://shubhamshaw.dev/" />
@@ -27,9 +27,23 @@
   "jobTitle": "Senior Software Engineer",
   "url": "https://shubhamshaw.dev/",
   "sameAs": [
-    "https://github.com",
-    "mailto:shawshubham24@gmail.com"
-  ]
+    "https://github.com/Shubhamshshaw",
+    "https://www.linkedin.com/in/shubham-s-9a1a34168"
+  ],
+  "email": "mailto:shawshubham24@gmail.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Vatsalya Circle",
+  "operatingSystem": "Android",
+  "applicationCategory": "HealthApplication",
+  "url": "https://vatsalyacircle.web.app/",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.vatsalyacircle.app",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "author": {"@type": "Person", "name": "Shubham Shaw", "url": "https://shubhamshaw.dev/"}
 }
 </script>
 <style>
@@ -400,6 +414,31 @@ body:hover #cursor-dot{opacity:1}
 .project-tags{display:flex;flex-wrap:wrap;gap:6px}
 .ptag{font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;
   color:var(--subtle);border:.5px solid rgba(255,255,255,.07);padding:3px 9px;border-radius:1px}
+/* Featured project (full width) */
+.project-card.featured{grid-column:1/-1;padding:3rem 2.6rem;
+  background:linear-gradient(135deg,rgba(0,245,255,.045),rgba(157,92,255,.05)) ,var(--mid2)}
+.project-card.featured::before,.project-card.featured::after{opacity:1;transform:scale(1)}
+.feat-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.2rem}
+.feat-badge{font-family:'Space Mono',monospace;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 10px;border-radius:2px;border:.5px solid rgba(0,245,255,.35);color:var(--cyan);background:rgba(0,245,255,.06)}
+.feat-badge.v{border-color:rgba(157,92,255,.4);color:#C9A6FF;background:rgba(157,92,255,.08)}
+.feat-badge .status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#3DFF9A;
+  box-shadow:0 0 8px #3DFF9A;margin-right:6px;vertical-align:1px}
+.project-card.featured .project-title{font-size:1.5rem}
+.feat-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.4rem;margin-bottom:1.6rem}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.feat-list li{font-size:.8rem;line-height:1.75;color:var(--muted);padding-left:1.1rem;position:relative}
+.feat-list li::before{content:'▹';position:absolute;left:0;color:var(--cyan)}
+.feat-list b{color:var(--white);font-weight:500}
+.feat-sub{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(0,245,255,.55);margin-bottom:.9rem}
+.feat-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+.feat-link{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--white);text-decoration:none;padding:9px 16px;border:.5px solid rgba(0,245,255,.3);border-radius:2px;
+  transition:background .25s,border-color .25s,color .25s}
+.feat-link:hover,.feat-link:focus-visible{background:rgba(0,245,255,.1);border-color:var(--cyan);color:var(--cyan)}
+.feat-link.primary{background:rgba(0,245,255,.12);border-color:var(--cyan);color:var(--cyan)}
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr;gap:1.6rem}.project-card.featured{padding:2.4rem 1.6rem}}
 
 /* ══ SKILLS ══ */
 #skills{background:var(--deep)}
@@ -820,6 +859,7 @@ body:hover #cursor-dot{opacity:1}
       <div>
         <p class="about-lead reveal rv1">Experienced SDE with deep expertise in .NET and full-stack solutions - driven by a passion for platform optimization and automation.</p>
         <p class="about-body reveal rv2">From automating healthcare claims at Wipro to architecting microservice-based HR platforms at Keka HR and driving cross-functional platform engineering at Optum, every role has been defined by measurable impact, technical rigor, and collaborative delivery.</p>
+        <p class="about-body reveal rv2">Outside my day job, I founded and single-handedly built <a href="#projects" style="color:var(--cyan);text-decoration:none">Vatsalya Circle</a>, a family elder-care app now live on Google Play across five countries - from React Native and Spring Boot code to Cloud Run infrastructure, CI/CD and the Product Hunt launch.</p>
         <p class="about-body reveal rv2">Skilled in system engineering, database design, and team leadership - recognized for outstanding contributions, agile problem-solving, and analytical thinking in complex production environments.</p>
         <div class="contact-block reveal rv3">
           <div class="contact-item"><svg class="ci-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:shawshubham24@gmail.com">shawshubham24@gmail.com</a></div>
@@ -910,10 +950,38 @@ body:hover #cursor-dot{opacity:1}
       <h2 class="section-title">Things I've <em>Shipped</em></h2>
     </div>
     <div class="projects-grid">
-      <div class="project-card reveal rv1"><div class="data-stream"></div><p class="project-num">// 01</p><h3 class="project-title">L&amp;T Construction - Data Management Suite</h3><p class="project-desc">Led full-stack development across transformer management, HVAC static pressure drop, and global masters modules. Delivered robust APIs and Azure integrations while automating document workflows, PDF merging, and ZIP creation. Enabled paperless operations and fast approvals for engineering, finance, supply chain, and mobile teams.</p><div class="project-tags"><span class="ptag">.NET Core</span><span class="ptag">Angular</span><span class="ptag">Azure</span><span class="ptag">PDF Automation</span><span class="ptag">REST APIs</span></div></div>
-      <div class="project-card reveal rv2"><div class="data-stream"></div><p class="project-num">// 02</p><h3 class="project-title">Mashreq BCM Risk System</h3><p class="project-desc">Engineered the backend API and database layer for a Business Continuity Management risk system, enhancing risk monitoring and reporting capabilities for a major financial institution. Focused on performance, data integrity, and compliance-grade reliability.</p><div class="project-tags"><span class="ptag">.NET Core</span><span class="ptag">MS SQL</span><span class="ptag">Risk Management</span><span class="ptag">API Design</span></div></div>
-      <div class="project-card reveal rv3"><div class="data-stream"></div><p class="project-num">// 03</p><h3 class="project-title">e2eWorkforce Reporting Automation</h3><p class="project-desc">Built and integrated Spring Boot APIs with full TDD practices. Automated CI/CD pipelines using SonarQube and GitLab, significantly expediting workforce reporting and deployment workflows across the organization.</p><div class="project-tags"><span class="ptag">Java Spring Boot</span><span class="ptag">GitLab CI/CD</span><span class="ptag">SonarQube</span><span class="ptag">TDD</span></div></div>
-      <div class="project-card reveal rv4"><div class="data-stream"></div><p class="project-num">// 04</p><h3 class="project-title">Keka HR - Automated Workflow Scheduler</h3><p class="project-desc">Designed and implemented automated report scheduling, resource allocation, and compliance-compliant image processing pipelines. Migrated legacy workflows to microservices architecture, reducing manual reporting time by over 40% and achieving 99% reliability for enterprise HR operations at scale.</p><div class="project-tags"><span class="ptag">Microservices</span><span class="ptag">.NET Core</span><span class="ptag">Scheduler</span><span class="ptag">Image Processing</span><span class="ptag">HR Platform</span></div></div>
+      <div class="project-card featured reveal rv1"><div class="data-stream"></div>
+        <p class="project-num">// 01 &middot; Founder &amp; Solo Engineer &middot; 2026</p>
+        <div class="feat-badges"><span class="feat-badge"><span class="status-dot"></span>Live on Google Play</span><span class="feat-badge v">Launched on Product Hunt &middot; 20 Nov 2026</span><span class="feat-badge">IN &middot; US &middot; UK &middot; CA &middot; AU</span></div>
+        <h3 class="project-title">Vatsalya Circle - Family Elder-Care App</h3>
+        <div class="feat-grid">
+          <div>
+            <p class="project-desc">A free, ad-free Android app for families looking after ageing parents, which I designed, built, shipped and now market on my own. Check-ins for medicines, meals and walks ring like an alarm on whoever's turn it is; the family hears only when one is missed; siblings take turns; one-tap SOS alerts everyone with location; and Safety Check walks elders through suspicious calls asking for money or an OTP.</p>
+            <p class="project-desc">Available in English, Hindi, Bengali and Kannada. Ran a two-week closed test with 18 testers, then went live on Google Play in India, the US, the UK, Canada and Australia.</p>
+          </div>
+          <div>
+            <p class="feat-sub">Under the hood</p>
+            <ul class="feat-list">
+              <li><b>Mobile:</b> React Native 0.87 (TypeScript) targeting Android 16, Firebase Phone Auth verified server-side, FCM push with tap-to-navigate</li>
+              <li><b>Backend:</b> Spring Boot 3 / Java 21 API on Google Cloud Run that scales to zero; Cloud Scheduler fires due check-ins, missed alerts and SOS re-rings every minute, with row-level locks so overlapping runs never double-send</li>
+              <li><b>Data:</b> Supabase PostgreSQL with row-level security and service-role-only access</li>
+              <li><b>AI:</b> Gemini voice logging for activities and health readings, plus a rules-plus-model Safety Check that falls back to rules when the model is slow</li>
+              <li><b>Delivery &amp; growth:</b> GitHub Actions CI/CD (cloud Android builds, Artifact Registry, Cloud Run, Firebase Hosting); a website with 40 care guides, structured data and GA4</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-tags"><span class="ptag">React Native</span><span class="ptag">TypeScript</span><span class="ptag">Spring Boot</span><span class="ptag">Java 21</span><span class="ptag">Cloud Run</span><span class="ptag">Supabase / PostgreSQL</span><span class="ptag">Firebase</span><span class="ptag">Gemini AI</span><span class="ptag">GitHub Actions</span><span class="ptag">SEO &amp; Analytics</span></div>
+        <div class="feat-links">
+          <a class="feat-link primary" href="https://play.google.com/store/apps/details?id=com.vatsalyacircle.app&amp;utm_source=portfolio" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
+          <a class="feat-link" href="https://vatsalyacircle.web.app/" target="_blank" rel="noopener">Website &#8599;</a>
+          <a class="feat-link" href="https://www.producthunt.com/posts/vatsalya-circle" target="_blank" rel="noopener">Product Hunt &#8599;</a>
+          <a class="feat-link" href="https://www.youtube.com/@vatsalyacircle" target="_blank" rel="noopener">YouTube &#8599;</a>
+        </div>
+      </div>
+      <div class="project-card reveal rv1"><div class="data-stream"></div><p class="project-num">// 02</p><h3 class="project-title">L&amp;T Construction - Data Management Suite</h3><p class="project-desc">Led full-stack development across transformer management, HVAC static pressure drop, and global masters modules. Delivered robust APIs and Azure integrations while automating document workflows, PDF merging, and ZIP creation. Enabled paperless operations and fast approvals for engineering, finance, supply chain, and mobile teams.</p><div class="project-tags"><span class="ptag">.NET Core</span><span class="ptag">Angular</span><span class="ptag">Azure</span><span class="ptag">PDF Automation</span><span class="ptag">REST APIs</span></div></div>
+      <div class="project-card reveal rv2"><div class="data-stream"></div><p class="project-num">// 03</p><h3 class="project-title">Mashreq BCM Risk System</h3><p class="project-desc">Engineered the backend API and database layer for a Business Continuity Management risk system, enhancing risk monitoring and reporting capabilities for a major financial institution. Focused on performance, data integrity, and compliance-grade reliability.</p><div class="project-tags"><span class="ptag">.NET Core</span><span class="ptag">MS SQL</span><span class="ptag">Risk Management</span><span class="ptag">API Design</span></div></div>
+      <div class="project-card reveal rv3"><div class="data-stream"></div><p class="project-num">// 04</p><h3 class="project-title">e2eWorkforce Reporting Automation</h3><p class="project-desc">Built and integrated Spring Boot APIs with full TDD practices. Automated CI/CD pipelines using SonarQube and GitLab, significantly expediting workforce reporting and deployment workflows across the organization.</p><div class="project-tags"><span class="ptag">Java Spring Boot</span><span class="ptag">GitLab CI/CD</span><span class="ptag">SonarQube</span><span class="ptag">TDD</span></div></div>
+      <div class="project-card reveal rv4"><div class="data-stream"></div><p class="project-num">// 05</p><h3 class="project-title">Keka HR - Automated Workflow Scheduler</h3><p class="project-desc">Designed and implemented automated report scheduling, resource allocation, and compliance-compliant image processing pipelines. Migrated legacy workflows to microservices architecture, reducing manual reporting time by over 40% and achieving 99% reliability for enterprise HR operations at scale.</p><div class="project-tags"><span class="ptag">Microservices</span><span class="ptag">.NET Core</span><span class="ptag">Scheduler</span><span class="ptag">Image Processing</span><span class="ptag">HR Platform</span></div></div>
     </div>
   </div>
 </section>
@@ -1129,7 +1197,7 @@ const gmsgs={
   hero:"Initializing systems… I'm Shubham. Scroll to explore my universe 🚀",
   about:"Logged 6 years in the field. Full-stack, Cloud-native, impact-driven. Nice to meet you 👋",
   experience:"Career trajectory: Wipro → DIATOZ → Keka HR → Optum. Each orbit shaped my craft.",
-  projects:"These aren't experiments. They're shipped, production-grade systems.",
+  projects:"Start with Vatsalya Circle - my own app, built solo and live on Google Play 📱",
   skills:".NET Core, Angular, Azure - primary coordinates. Always expanding the tech map.",
   education:"Origin story: Kolkata. Compiled in Jadavpur. Now operating globally 📡",
   certifications:"Verified skills + one award that means more than the others.",

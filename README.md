@@ -140,19 +140,30 @@ The portfolio uses a custom CSS variable palette — dark, neon, cyberpunk:
 
 ## 🔬 Featured Projects
 
-### 01 — L&T Construction Data Management Suite
+### 01 — Vatsalya Circle · Family Elder-Care App *(Founder & Solo Engineer, 2026)*
+A free, ad-free Android app for families looking after ageing parents: check-ins that ring like an alarm, missed-check-in alerts to the family, sibling turn-taking, one-tap SOS with location, and an AI-assisted Safety Check for scam calls. English, Hindi, Bengali and Kannada. Live on Google Play in India, the US, the UK, Canada and Australia; launched on Product Hunt on 20 Nov 2026.
+
+- **Mobile:** React Native 0.87 (TypeScript), Android 16, Firebase Phone Auth, FCM push
+- **Backend:** Spring Boot 3 / Java 21 on Google Cloud Run (scale-to-zero), Cloud Scheduler jobs with row-level locks
+- **Data & AI:** Supabase PostgreSQL with RLS; Gemini voice logging and a rules-plus-model Safety Check
+- **Delivery:** GitHub Actions CI/CD, Artifact Registry, Firebase Hosting; website with 40 care guides, structured data and GA4
+
+[Google Play](https://play.google.com/store/apps/details?id=com.vatsalyacircle.app) · [Website](https://vatsalyacircle.web.app/) · [Product Hunt](https://www.producthunt.com/posts/vatsalya-circle) · [YouTube](https://www.youtube.com/@vatsalyacircle)
+`React Native · TypeScript · Spring Boot · Java 21 · Cloud Run · Supabase · Firebase · Gemini AI · GitHub Actions`
+
+### 02 — L&T Construction Data Management Suite
 Full-stack platform spanning transformer management, HVAC modules, and global masters. Azure-integrated with document workflow automation including PDF merging, ZIP creation, and mobile-ready approvals for engineering, finance, and supply chain teams.
 `  .NET Core · Angular · Azure · PDF Automation · REST APIs`
 
-### 02 — Mashreq BCM Risk System
+### 03 — Mashreq BCM Risk System
 Backend API and database layer for a Business Continuity Management risk platform at a major financial institution. Built for compliance-grade reliability, data integrity, and performance.
 `.NET Core · MS SQL · Risk Management · API Design`
 
-### 03 — e2eWorkforce Reporting Automation
+### 04 — e2eWorkforce Reporting Automation
 Spring Boot APIs built with full TDD practices, wired into GitLab CI/CD pipelines with SonarQube quality gates. Drastically reduced deployment cycle times.
 `Java Spring Boot · GitLab CI/CD · SonarQube · TDD`
 
-### 04 — Keka HR Automated Workflow Scheduler
+### 05 — Keka HR Automated Workflow Scheduler
 Migrated legacy HR workflows to a microservices architecture. Automated report scheduling, resource allocation, and compliance-compliant image processing — cutting manual reporting time by 40%.
 `Microservices · .NET Core · Scheduler · Image Processing · HR Platform`
 
